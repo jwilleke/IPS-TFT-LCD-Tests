@@ -411,12 +411,23 @@ void setup()
 
 void loop()
 {
+  Serial.println("Start testDrawPixel!");
   testDrawPixel();
+  Serial.println("Start testLine!");
   testLine();
+  Serial.println("Start testFastLines!");
   testFastLines(COLOR_RGB565_PURPLE, COLOR_RGB565_YELLOW);
+  Serial.println("Start testRects!");
   testRects(COLOR_RGB565_BLACK, COLOR_RGB565_WHITE);
+  Serial.println("Start testRoundRects!");
   testRoundRects();
+  Serial.println("Start testCircles!");
   testCircles(24, COLOR_RGB565_BLUE);
+  Serial.println("Start testTriangles!");
   testTriangles(COLOR_RGB565_YELLOW);
+  Serial.println("Start testPrint!");
   testPrint();
+  Serial.println("Wiating for Loop!");
+  screen.println("Wiating for Loop!");
+  delay(2000);
 }
